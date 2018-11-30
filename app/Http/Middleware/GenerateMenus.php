@@ -16,7 +16,7 @@ class GenerateMenus
     public function handle($request, Closure $next)
     {
         \Menu::make('MyNavBar', function ($menu) {
-            $menu->add('Cliente');
+            $menu->add('Cliente', 'clientes');
             $menu->add('Fornecedor', 'about');
             $menu->add('Funcionário', 'services');
             $menu->add('Veículo', 'contact');
