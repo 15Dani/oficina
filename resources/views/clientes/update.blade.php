@@ -19,6 +19,11 @@
                        <label for="endereco"> Endereço </label>
                        <input class ="form-control" type="text" id="endereco" name="endereco" placeholder="Endereço"/>
                     </div>    
+                        
+                     <div class="form-group"> 
+                         <label for="numero"> Endereço </label>
+                        <input class ="form-control" type="text" id="numero" placeholder="Numero"/>
+                    </div> 
                    
                     <div class="form-group"> 
                        <label for="telefone"> Telefone </label>

@@ -13,16 +13,22 @@
             <thead>
             <a href="{{route('clientes.create')}}" class="btn btn-primary btn-xs pull-right"><b>+</b> Novo Cliente</a>
                 <tr>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Parent ID</th>
+                    <th>Nome</th>
+                    <th>Endereço</th>
+                    <th>Numero</th>
+                    <th>Bairro ID</th>
+                    <th>CEP</th>
+                    <th>Telefone</th>
                     <th class="text-center">Action</th>
                 </tr>
             </thead>
                     <tr>
-                        <td>1</td>
-                        <td>News</td>
-                        <td>News Cate</td>
+                    <th>Nome</th>
+                    <th>Endereço</th>
+                    <th>Numero</th>
+                    <th>Bairro ID</th>
+                    <th>CEP</th>
+                    <th>Telefone</th>
                         <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
                     </tr>
                     <tr>
