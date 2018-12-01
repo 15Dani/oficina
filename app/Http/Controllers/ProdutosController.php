@@ -2,26 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Produtos;
 use Illuminate\Http\Request;
-use App\Veiculos;
 
-class VeiculosController extends Controller
+class ProdutosController extends Controller
 {
     /**
      * Display a listing of the resource.
-     * Aqui está todos os controles do veiculos que o mesmo vai funcionar
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-//dd('aa');
-        //Mostra o html do veiculo
-        $veiculo = Veiculos::all();
-        dd($veiculo);
-        return view('veiculos.index', compact('veiculos'));
+        $produtos = Produtos::all();
+        return view('produtos.index', compact('produtos'));
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -30,8 +25,7 @@ class VeiculosController extends Controller
      */
     public function create()
     {
-        //Criar um novo veiculo
-        return view('veiculos.create');
+        return view('produtos.create');
     }
 
     /**
@@ -42,9 +36,8 @@ class VeiculosController extends Controller
      */
     public function store(Request $request)
     {
-        //direcionar o veiculo cliente para o redirect
-        veiculos::create($request->all());
-        return redirect()->route('veiculos.index');
+        Produtos::create($request->all());
+        return redirect()->route('produtos.index');
     }
 
     /**
@@ -55,7 +48,7 @@ class VeiculosController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -64,11 +57,11 @@ class VeiculosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, Produtos $produtos)
     {
-        //
-        $veiculo = $veiculo->find($id);
-        return view('veiculos.update', compact('veiculo'));
+        
+        $produtos = $produtos->find($id);
+        return view('produtos.update', compact('produtos'));
     }
 
     /**
@@ -78,14 +71,12 @@ class VeiculosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, Produtos $produtos)
     {
-        //
-        $veiculo = $veiculo->find($id);
-        // Clientes::create($request->all());
-        $veiculo->update($request->all());
-        return redirect()->route('veiculos.index');
-
+        $produtos = $Produtos->find($id);
+        
+        $produtos->update($request->all());
+        return redirect()->route('produtos.index');
     }
 
     /**
@@ -94,11 +85,10 @@ class VeiculosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, Produtos $produtos)
     {
-        //Deletar o veiculo
-        $veiculo = $veiculo->find($id);
-        $veiculo->delete();
-        return redirect()->route('veiculos.index');
+        $produtos = $produtos->find($id);
+        $produtos->delete();
+        return redirect()->route('produtos.index');
     }
 }

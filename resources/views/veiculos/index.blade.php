@@ -33,9 +33,9 @@
                       <td>{{ $veiculo->ano }}</td>
                       <td>{{ $veiculo->status }}</td>
                     <td class="text-center">
-                    <form method="POST" action="{{route('veiculos.destroy', $veiculo->id)}}" accept-charset="UTF-8"><input name="_method" type="hidden" value="DELETE">
+                    <form method="POST" action="{{route('$veiculos.destroy', $veiculo->id)}}" accept-charset="UTF-8"><input name="_method" type="hidden" value="DELETE">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">    
-                          <a class='btn btn-info btn-xs' href="{{route('veiculos.edit', $veiculo->id)}}">
+                          <a class='btn btn-info btn-xs' href="{{route('$veiculos.edit', $veiculo->id)}}">
                             <span class="glyphicon glyphicon-edit"></span> Edit
                           </a>                    
                           <button style="float:right" type='submit' class='btn btn-danger'><span class="glyphicon glyphicon-remove"></span> Del</button>                                            

@@ -20,3 +20,4 @@ class Pagamentos extends Model
      * */
     //protected $fillable = ['id','nome','endereco','telefone','bairro','numero','cep'];
 }
+

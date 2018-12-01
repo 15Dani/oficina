@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProdutotableTable extends Migration
+class CreateComprastableTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateProdutotableTable extends Migration
      */
     public function up()
     {
-        Schema::create('_produtotable', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nome')->nullable();
-            $table->is_integer('valor')->nullable();
-            $table->is_integer('quantidade')->nullable();
+        Schema::create('comprastable', function (Blueprint $table) {
+            $table->increments('nome');
+            $table->increments('valorcompra');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateProdutotableTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_produtotable');
+        Schema::dropIfExists('comprastable');
     }
 }

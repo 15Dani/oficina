@@ -28,6 +28,8 @@ Route::group(['middleware'=> 'auth'], function() {
     Route::resource('/fornecedores', "FornecedoresController");
     Route::resource('/funcionarios', "FuncionariosController");
     Route::resource('/veiculos', "VeiculosController");
+    Route::resource('/produtos', "ProdutosController");
+    Route::resource('/compras', "ComprasController");
     Route::resource('/pagamentos', "PagamentosController");
     
 });

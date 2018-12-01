@@ -2,26 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Compras;
 use Illuminate\Http\Request;
-use App\Veiculos;
 
-class VeiculosController extends Controller
+class ComprasController extends Controller
 {
     /**
      * Display a listing of the resource.
-     * Aqui está todos os controles do veiculos que o mesmo vai funcionar
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-//dd('aa');
-        //Mostra o html do veiculo
-        $veiculo = Veiculos::all();
-        dd($veiculo);
-        return view('veiculos.index', compact('veiculos'));
+        $compras = Compras::all();
+        return view('compras.index', compact('compras'));
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -30,8 +25,7 @@ class VeiculosController extends Controller
      */
     public function create()
     {
-        //Criar um novo veiculo
-        return view('veiculos.create');
+        return view('compras.create');
     }
 
     /**
@@ -42,9 +36,8 @@ class VeiculosController extends Controller
      */
     public function store(Request $request)
     {
-        //direcionar o veiculo cliente para o redirect
-        veiculos::create($request->all());
-        return redirect()->route('veiculos.index');
+        Compras::create($request->all());
+        return redirect()->route('compras.index');
     }
 
     /**
@@ -55,7 +48,7 @@ class VeiculosController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -64,11 +57,12 @@ class VeiculosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, Compras $compras)
     {
-        //
-        $veiculo = $veiculo->find($id);
-        return view('veiculos.update', compact('veiculo'));
+        //dd($funcionarios);
+        $Compras = $compras->find($id);
+        //dd($funcionario);
+        return view('compras.update', compact('compras'));
     }
 
     /**
@@ -78,14 +72,12 @@ class VeiculosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, Compras $compras)
     {
-        //
-        $veiculo = $veiculo->find($id);
-        // Clientes::create($request->all());
-        $veiculo->update($request->all());
-        return redirect()->route('veiculos.index');
-
+        $compras = $compras->find($id);
+        
+        $compras->update($request->all());
+        return redirect()->route('compras.index');
     }
 
     /**
@@ -94,11 +86,11 @@ class VeiculosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, Compras $compras)
     {
-        //Deletar o veiculo
-        $veiculo = $veiculo->find($id);
-        $veiculo->delete();
-        return redirect()->route('veiculos.index');
+        $compras = $compras->find($id);
+        $compras->delete();
+        return redirect()->route('compras.index');
     }
 }
+
