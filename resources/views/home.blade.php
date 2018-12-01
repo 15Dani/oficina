@@ -8,6 +8,6 @@
   <meta charset="utf-8">
    
 <div class="container">
-<h3>Oficina</h3>
+    {!! $MyNavBar->asDiv() !!}    
 </div>
 @endsection
