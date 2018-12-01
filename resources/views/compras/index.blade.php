@@ -9,10 +9,22 @@
    
 <div class="container">
     <div class="row ">
+    {{-- BUSCA --}}
+    <div class="col-8">
+    <a href="{{route('compras.create')}}" class="btn btn-primary btn-xs pull-right"><b>+</b> Novo produtos</a>
+</div>
+<div class="col-4">
+<form class="form-inline" action="">
+              <input value="{{@$request->busca}}" class="form-control mr-sm-2" name="busca" type="text" placeholder="Search">
+                <button class="btn btn-success" type="submit">Pesquisar</button>
+              </form>
+</div>
+</div>
+{{-- BUSCA FIM --}}
+      <div class="row ">
         <table class="table table-striped custab">
             <thead>
-            <a href="{{route('compras.create')}}" class="btn btn-primary btn-xs pull-right"><b>+</b> Novo produtos</a>
-                <tr>
+                  <tr>
                     <th>Nome</th>
                     <th>valor</th>
                     <th class="text-center">Action</th>
