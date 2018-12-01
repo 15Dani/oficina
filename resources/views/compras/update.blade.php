@@ -9,16 +9,16 @@
    
 <div class="container">
      
-        <form method="POST" action="{{ route('compras.update', $compras->id) }}">
+        <form method="POST" action="{{ route('compras.update', $compra->id) }}">
           <input type="hidden" name="_token" value="{{ csrf_token() }}"> 
           <input name="_method" type="hidden" value="PUT">           
             <div class="form-group">
                 <label for="nome"> Nome da compra </label>
-                <input  value="{{ $compras->nome }}"  class ="form-control" type="text" id="nome" name="nome" placeholder="Nome"/>
+                <input  value="{{ $compra->nome }}"  class ="form-control" type="text" id="nome" name="nome" placeholder="Nome"/>
              </div>
              <div class="form-group"> 
                  <label for="valor"> valor da compra</label>
-                 <input class ="form-control" type="int" id="valor" name="valor" value="{{ $compras->valor }}"  placeholder="valor"/>
+                 <input class ="form-control" type="int" id="valor" name="valor" value="{{ $compra->valor }}"  placeholder="valor"/>
               </div>    
                         
              
