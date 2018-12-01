@@ -17,33 +17,25 @@
                    </div>
                    <div class="form-group"> 
                        <label for="modelo"> modelo </label>
-                       <input class ="form-control" type="text" id="endereco" name="endereco" placeholder="Endereço"/>
+                       <input class ="form-control" type="text" id="modelo" name="modelo" placeholder="modelo"/>
                     </div> 
             
                     <div class="form-group"> 
-                         <label for="numero">  </label>
+                         <label for="numero"> Data entrada  </label>
                         <input class ="form-control" type="text" id="numero" placeholder="Numero"/>
                     </div>  
                    
                     <div class="form-group"> 
-                       <label for="telefone">  </label>
+                       <label for="telefone"> Data de saida </label>
                        <input class ="form-control" type="text" id="telefone" name="telefone" placeholder="Telefone"/>
                        </div>  
                    
                    <div class="form-group">
-                       <label for="bairro"></label>
+                       <label for="bairro"> Status do veiculos</label>
                         <input class ="form-control" type="text" id="bairro" name="bairro" placeholder="Bairro"/>
                      </div>
                    
-                   <div class="form-group">
-                      <label for="numero">  </label>
-                      <input class ="form-control" type="int" id="numero" name="numero" placeholder="Numero"/>
-                   </div>
-                   
-                   <div class="form-group">
-                    <label for="cep"> CEP </label>
-                    <input class ="form-control" type="int" id="cep" name="cep" placeholder="CEP"/>
-                   </div>
+                  
                    
                    
                      <! CRuD formulario -->
