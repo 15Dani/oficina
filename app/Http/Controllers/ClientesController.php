@@ -74,9 +74,13 @@ class ClientesController extends Controller
      * @param  \App\Clientes  $clientes
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Clientes $clientes)
+    public function update($id, Request $request, Clientes $clientes)
     {
-        //
+        $cliente = $clientes->find($id);
+        // Clientes::create($request->all());
+        $cliente->update($request->all());
+        return redirect()->route('clientes.index');
+
     }
 
     /**
