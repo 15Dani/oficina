@@ -18,10 +18,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware'=> 'auth'], function() {
 
-Route::resource('/clientes', "ClientesController");
+    Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get("/aa", function () {
-    echo "test BR";
+    Route::resource('/clientes', "ClientesController");
 });
+

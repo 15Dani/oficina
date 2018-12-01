@@ -23,18 +23,15 @@
                     <div class="form-group"> 
                        <label for="telefone"> Telefone </label>
                        <input class ="form-control" type="text" id="telefone" name="telefone" placeholder="Telefone"/>
-                       </div>  
-                   
+                       </div>                     
                    <div class="form-group">
                        <label for="bairro"> Bairro </label>
                         <input class ="form-control" type="text" id="bairro" name="bairro" placeholder="Bairro"/>
-                     </div>
-                   
+                     </div>                   
                    <div class="form-group">
                       <label for="numero"> Numero </label>
                       <input class ="form-control" type="int" id="numero" name="numero" placeholder="Numero"/>
-                   </div>
-                   
+                   </div>                   
                    <div class="form-group">
                     <label for="cep"> CEP </label>
                     <input class ="form-control" type="int" id="cep" name="cep" placeholder="CEP"/>

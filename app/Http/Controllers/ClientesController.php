@@ -13,8 +13,9 @@ class ClientesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('clientes.index');
+    {   
+        $clientes = Clientes::all();        
+        return view('clientes.index', compact('clientes'));
     }
 
     /**
@@ -35,7 +36,11 @@ class ClientesController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        Clientes::create($request->all());
+        return redirect()->route('clientes.index');
+
+        
+        
     }
 
     /**
@@ -57,7 +62,8 @@ class ClientesController extends Controller
      */
     public function edit(Clientes $clientes)
     {
-        //
+        return redirect()->route('clientes.edit', compact('clientes'));
+        
     }
 
     /**
