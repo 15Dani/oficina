@@ -9,7 +9,7 @@
    
 <div class="container">
      
-        <form method="POST" action="{{ route('Fornecedor.store') }}">
+        <form method="POST" action="{{ route('fornecedores.store') }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">          
                     <div class="form-group">
                           <label for="nome"> Nome Completo Fornecedor  </label>
