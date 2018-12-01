@@ -22,27 +22,23 @@
                     <th class="text-center">Action</th>
                 </tr>
             </thead>
-                    <tr>
-                    <th>Nome</th>
-                    <th>Endereço</th>
-                    <th>Numero</th>
-                    <th>Bairro ID</th>
-                    <th>CEP</th>
-                    <th>Telefone</th>
-                        <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Products</td>
-                        <td>Main Products</td>
-                        <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Blogs</td>
-                        <td>Parent Blogs</td>
-                        <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
-                    </tr>
+            <tbody>
+              @forelse ($clientes as $cliente)
+                <tr>
+                  <td>{{$cliente->nome}}</td>
+                  <td>Endereço</td>
+                  <td>Numero</td>
+                  <td>Bairro ID</td>
+                  <td>CEP</td>
+                  <td>Telefone</td>
+                    <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+                </tr>                    
+                  
+              @empty
+                  <h2>Não existem registros</h2>
+              @endforelse
+
+            </tbody>
             </table>
     
  
