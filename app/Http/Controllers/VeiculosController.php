@@ -18,7 +18,7 @@ class VeiculosController extends Controller
 //dd('aa');
         //Mostra o html do veiculo
         $veiculo = Veiculos::all();
-        dd($veiculo);
+        // dd($veiculo);
         return view('veiculos.index', compact('veiculos'));
     }
 

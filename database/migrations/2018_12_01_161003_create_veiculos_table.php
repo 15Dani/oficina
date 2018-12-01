@@ -16,6 +16,10 @@ class CreateVeiculosTable extends Migration
         if (!Schema::hasTable('veiculos')) {
             Schema::create('veiculos', function (Blueprint $table) {
                 $table->increments('id');
+                $table->string('modelo');
+                $table->string('ano');
+                $table->string('placa');
+                $table->string('status');
                 $table->timestamps();
             });
         }
