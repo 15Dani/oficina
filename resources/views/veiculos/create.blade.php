@@ -9,7 +9,7 @@
    
 <div class="container">
      
-        <form method="POST" action="{{ route('Veiculo.store') }}">
+        <form method="POST" action="{{ route('veiculos.store') }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">          
                     <div class="form-group">
                           <label for="placa"> placa  </label>
@@ -31,12 +31,15 @@
                        </div>  
                    
                    <div class="form-group">
-                       <label for="status"> Status</label>
+                       <label for="status"> status</label>
                         <input class ="form-control" type="text" id="status" name="status" placeholder="status"/>
                      </div>
                    
+                     <div class="form-group">
+                       <label for="status"> ano</label>
+                        <input class ="form-control" type="text" id="status" name="status" placeholder="status"/>
+                     </div>
                   
-                   
                    
                      <! CRuD formulario -->
                    <div class="form-group">

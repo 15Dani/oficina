@@ -19,8 +19,11 @@ class GenerateMenus
             $menu->add('Cliente', 'clientes');
             $menu->add('Fornecedor', 'fornecedores');
             $menu->add('Funcionário', 'funcionarios');
-            $menu->add('Veículo', 'contact');
+            $menu->add('Veículo', 'veiculos');
+            $menu->add('Produto', 'contact');
+            $menu->add('Compra', 'contact');
             $menu->add('Pagamento', 'contact');
+
         });
 
         return $next($request);

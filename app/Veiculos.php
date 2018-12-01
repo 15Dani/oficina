@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Veiculos extends Model
 {
-    //
-    //protected $fillable = ['id','nome','endereco','telefone','bairro','numero','cep'];
+    // Aqui está as variaveis que temos em veiculo
+    protected $fillable = ['modelo','placa','dataentrada','datasaida','ano','status'];
 }

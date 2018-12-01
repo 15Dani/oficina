@@ -9,13 +9,17 @@ class VeiculosController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * Aqui está todos os controles do veiculos que o mesmo vai funcionar
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        //Mostra o html do veiculo
+        $veiculo = veiculos::all();        
+        return view('veiculos.index', compact('veiculos'));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -24,7 +28,8 @@ class VeiculosController extends Controller
      */
     public function create()
     {
-        //
+        //Criar um novo veiculo
+        return view('veiculos.create');
     }
 
     /**
@@ -35,7 +40,9 @@ class VeiculosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //direcionar o veiculo cliente para o redirect
+        veiculos::create($request->all());
+        return redirect()->route('veiculos.index');
     }
 
     /**
@@ -58,6 +65,8 @@ class VeiculosController extends Controller
     public function edit($id)
     {
         //
+        $veiculo = $veiculo->find($id);
+        return view('veiculos.update', compact('veiculo'));
     }
 
     /**
@@ -70,6 +79,11 @@ class VeiculosController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $veiculo = $veiculo->find($id);
+        // Clientes::create($request->all());
+        $veiculo->update($request->all());
+        return redirect()->route('veiculos.index');
+
     }
 
     /**
@@ -80,6 +94,9 @@ class VeiculosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //Deletar o veiculo
+        $veiculo = $veiculo->find($id);
+        $veiculo->delete();
+        return redirect()->route('veiculos.index');
     }
 }
