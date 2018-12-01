@@ -60,9 +60,10 @@ class ClientesController extends Controller
      * @param  \App\Clientes  $clientes
      * @return \Illuminate\Http\Response
      */
-    public function edit(Clientes $clientes)
-    {
-        return redirect()->route('clientes.edit', compact('clientes'));
+    public function edit($id, Clientes $clientes)
+    {   
+        $cliente = $clientes->find($id);
+        return view('clientes.update', compact('cliente'));
         
     }
 
@@ -73,9 +74,13 @@ class ClientesController extends Controller
      * @param  \App\Clientes  $clientes
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Clientes $clientes)
+    public function update($id, Request $request, Clientes $clientes)
     {
-        //
+        $cliente = $clientes->find($id);
+        // Clientes::create($request->all());
+        $cliente->update($request->all());
+        return redirect()->route('clientes.index');
+
     }
 
     /**
@@ -84,8 +89,12 @@ class ClientesController extends Controller
      * @param  \App\Clientes  $clientes
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Clientes $clientes)
+    public function destroy($id, Clientes $clientes)
     {
         //
+        $cliente = $clientes->find($id);
+        $cliente->delete();
+        return redirect()->route('clientes.index');
+
     }
 }
