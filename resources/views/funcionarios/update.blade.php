@@ -13,7 +13,7 @@
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">          
                     <div class="form-group">
                           <label for="nome"> Nome Completo do funcionario </label>
-                          <input  value="{{@$nome}}"  class ="form-control" type="text" id="nome" name="nome" placeholder="Nome"/>
+                          <input  value="{{@funcionario->$nome}}"  class ="form-control" type="text" id="nome" name="nome" placeholder="Nome"/>
                    </div>
                    <div class="form-group"> 
                        <label for="endereco"> Endereço do funcionario </label>
