@@ -9,8 +9,9 @@
    
 <div class="container">
      
-        <form method="POST" action="{{ route('fornecedores.store') }}">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">          
+        <form method="POST" action="{{ route('fornecedores.update') }}">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">     
+                <input name="_method" type="hidden" value="PUT">         
                     <div class="form-group">
                           <label for="nome"> Nome Completo Fornecedor </label>
                           <input  value="{{@fornecedor->$nome}}"  class ="form-control" type="text" id="nome" name="nome" placeholder="Nome"/>

@@ -15,6 +15,8 @@ class FuncionariosController extends Controller
     public function index()
     {
         //
+        $funcionarios = Funcionarios::all();
+        return view('funcionarios.index', compact('funcionarios'));
     }
 
     /**
@@ -25,6 +27,8 @@ class FuncionariosController extends Controller
     public function create()
     {
         //
+        return view('funcionarios.create');
+
     }
 
     /**
@@ -36,6 +40,8 @@ class FuncionariosController extends Controller
     public function store(Request $request)
     {
         //
+        Funcionarios::create($request->all());
+        return redirect()->route('funcionarios.index');
     }
 
     /**
@@ -55,9 +61,11 @@ class FuncionariosController extends Controller
      * @param  \App\Funcionarios  $funcionarios
      * @return \Illuminate\Http\Response
      */
-    public function edit(Funcionarios $funcionarios)
+    public function edit($id, Funcionarios $funcionarios)
     {
         //
+        $funcionario = $funcionarios->find($id);
+        return view('funcionarios.update', compact('funcionario'));
     }
 
     /**

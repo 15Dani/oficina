@@ -9,11 +9,12 @@
    
 <div class="container">
      
-        <form method="POST" action="{{ route('Funcionario.store') }}">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">          
+        <form method="POST" action="{{ route('funcionarios.update') }}">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">   
+                <input name="_method" type="hidden" value="PUT">           
                     <div class="form-group">
                           <label for="nome"> Nome Completo do funcionario </label>
-                          <input  value="{{@funcionario->$nome}}"  class ="form-control" type="text" id="nome" name="nome" placeholder="Nome"/>
+                          <input  value="{{@$funcionario->nome}}"  class ="form-control" type="text" id="nome" name="nome" placeholder="Nome"/>
                    </div>
                    <div class="form-group"> 
                        <label for="endereco"> Endereço do funcionario </label>
