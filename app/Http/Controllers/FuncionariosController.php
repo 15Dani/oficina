@@ -75,9 +75,13 @@ class FuncionariosController extends Controller
      * @param  \App\Funcionarios  $funcionarios
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Funcionarios $funcionarios)
+    public function update($id, Request $request, Funcionarios $funcionarios)
     {
         //
+        $funcionario = $funcionarios->find($id);
+        // Clientes::create($request->all());
+        $funcionario->update($request->all());
+        return redirect()->route('funcionarios.index');
     }
 
     /**
@@ -86,8 +90,11 @@ class FuncionariosController extends Controller
      * @param  \App\Funcionarios  $funcionarios
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Funcionarios $funcionarios)
+    public function destroy($id, Funcionarios $funcionarios)
     {
         //
+        $funcionario = $funcionarios->find($id);
+        $funcionario->delete();
+        return redirect()->route('funcionarios.index');
     }
 }

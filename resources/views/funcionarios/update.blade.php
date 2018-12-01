@@ -9,7 +9,7 @@
    
 <div class="container">
      
-        <form method="POST" action="{{ route('funcionarios.update') }}">
+        <form method="POST" action="{{ route('funcionarios.update', $funcionario->id) }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">   
                 <input name="_method" type="hidden" value="PUT">           
                     <div class="form-group">
