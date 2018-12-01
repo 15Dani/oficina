@@ -13,26 +13,26 @@
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">          
                     <div class="form-group">
                           <label for="placa"> placa  </label>
-                         <input class ="form-control" type="text" id="placa" name="placa" placeholder="placa"/>
+                         <input class ="form-control" type="text" id="placa" name="placa" placeholder="Placa"/>
                    </div>
                    <div class="form-group"> 
                        <label for="modelo"> modelo </label>
-                       <input class ="form-control" type="text" id="modelo" name="modelo" placeholder="modelo"/>
+                       <input class ="form-control" type="text" id="modelo" name="modelo" placeholder="Modelo"/>
                     </div> 
             
                     <div class="form-group"> 
-                         <label for="numero"> Data entrada  </label>
-                        <input class ="form-control" type="text" id="numero" placeholder="Numero"/>
+                         <label for="dataentrada"> Data entrada  </label>
+                        <input class ="form-control" type="text" id="dataentrada" placeholder="Dataentrada"/>
                     </div>  
                    
                     <div class="form-group"> 
-                       <label for="telefone"> Data de saida </label>
-                       <input class ="form-control" type="text" id="telefone" name="telefone" placeholder="Telefone"/>
+                       <label for="Datasaida"> Data de saida </label>
+                       <input class ="form-control" type="text" id="datadesaida" name="datadesaida" placeholder="Datadesaida"/>
                        </div>  
                    
                    <div class="form-group">
-                       <label for="bairro"> Status do veiculos</label>
-                        <input class ="form-control" type="text" id="bairro" name="bairro" placeholder="Bairro"/>
+                       <label for="status"> Status</label>
+                        <input class ="form-control" type="text" id="status" name="status" placeholder="status"/>
                      </div>
                    
                   

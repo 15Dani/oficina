@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClientesTable extends Migration
+class CreateFuncionariosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateClientesTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('clientes')) {
-            Schema::create('clientes', function (Blueprint $table) {
+        if (!Schema::hasTable('funcionarios')) {
+            Schema::create('funcionarios', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('nome')->nullable();
                 $table->string('endereco')->nullable();
@@ -34,6 +34,6 @@ class CreateClientesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clientes');
+        Schema::dropIfExists('funcionarios');
     }
 }

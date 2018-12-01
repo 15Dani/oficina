@@ -62,8 +62,6 @@ class FornecedoresController extends Controller
      */
     public function edit($id, Fornecedores $fornecedores)
     {
-        //
-
         $fornecedor = $fornecedores->find($id);
         return view('fornecedores.update', compact('fornecedor'));
     }

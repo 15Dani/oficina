@@ -18,7 +18,7 @@ class GenerateMenus
         \Menu::make('MyNavBar', function ($menu) {
             $menu->add('Cliente', 'clientes');
             $menu->add('Fornecedor', 'fornecedores');
-            $menu->add('Funcionário', 'services');
+            $menu->add('Funcionário', 'funcionarios');
             $menu->add('Veículo', 'contact');
             $menu->add('Pagamento', 'contact');
         });

@@ -9,7 +9,7 @@
    
 <div class="container">
      
-        <form method="POST" action="{{ route('Funcionario.store') }}">
+        <form method="POST" action="{{ route('funcionarios.store') }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">          
                     <div class="form-group">
                           <label for="nome"> Nome Completo do funcionario </label>

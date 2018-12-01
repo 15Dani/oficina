@@ -13,16 +13,18 @@ class CreateFornecedoresTable extends Migration
      */
     public function up()
     {
-        Schema::create('fornecedores', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nome')->nullable();
-            $table->string('endereco')->nullable();
-            $table->string('telefone')->nullable();
-            $table->string('bairro')->nullable();
-            $table->string('numero')->nullable();
-            $table->string('cep')->nullable();
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('fornecedores')) {
+            Schema::create('fornecedores', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('nome')->nullable();
+                $table->string('endereco')->nullable();
+                $table->string('telefone')->nullable();
+                $table->string('bairro')->nullable();
+                $table->string('numero')->nullable();
+                $table->string('cep')->nullable();
+                $table->timestamps();
+            });
+        }
     }
 
     /**
