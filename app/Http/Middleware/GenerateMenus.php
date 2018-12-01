@@ -16,10 +16,11 @@ class GenerateMenus
     public function handle($request, Closure $next)
     {
         \Menu::make('MyNavBar', function ($menu) {
-            $menu->add('Home');
-            $menu->add('About', 'about');
-            $menu->add('Services', 'services');
-            $menu->add('Contact', 'contact');
+            $menu->add('Cliente');
+            $menu->add('Fornecedor', 'about');
+            $menu->add('Funcionário', 'services');
+            $menu->add('Veículo', 'contact');
+            $menu->add('Pagamento', 'contact');
         });
 
         return $next($request);
