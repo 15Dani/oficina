@@ -17,11 +17,11 @@ class GenerateMenus
     {
         \Menu::make('MyNavBar', function ($menu) {
             $menu->add('Cliente', 'clientes');
-            
+
             $menu->add('Fornecedor', 'fornecedores');
-            $menu->add('Funcionário', 'services');
-            $menu->add('Veículo', 'contact');
-            $menu->add('Pagamento', 'contact');
+            $menu->add('Funcionário', 'funcionarios');
+            $menu->add('Veículo', 'veiculos');
+            $menu->add('Pagamento', 'pagamentos');
         });
 
         return $next($request);
