@@ -26,12 +26,20 @@
               @forelse ($clientes as $cliente)
                 <tr>
                   <td>{{$cliente->nome}}</td>
-                  <td>{{$cliente->endereço</td>
-                  <td>{{$cliente->numero</td>
-                  <td>{{$cliente->bairro ID</td>
-                  <td>{{$cliente->cep</td>
-                  <td>{{$cliente->telefone</td>
-                    <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+                  <td>{{$cliente->endereco}}</td>
+                  <td>{{$cliente->numero}}</td>
+                  <td>{{$cliente->bairro}}</td>
+                  <td>{{$cliente->cep}}</td>
+                  <td>{{$cliente->telefone}}</td>
+                <td class="text-center">
+                <form method="POST" action="{{route('clientes.destroy', $cliente->id)}}" accept-charset="UTF-8"><input name="_method" type="hidden" value="DELETE">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">   
+                      <a class='btn btn-info btn-xs' href="{{route('clientes.edit', $cliente->id)}}">
+                        <span class="glyphicon glyphicon-edit"></span> Edit
+                      </a>                    
+                      <button style="float:right" type='submit' class='btn btn-danger'><span class="glyphicon glyphicon-remove"></span> Del</button>                                            
+                      </form>
+                </td>
                 </tr>                    
                   
               @empty
