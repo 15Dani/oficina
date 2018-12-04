@@ -22,7 +22,7 @@
             
                     <div class="form-group"> 
                          <label for="dataentrada"> Data entrada  </label>
-                        <input class ="form-control" type="text" id="dataentrada" placeholder="Dataentrada"/>
+                        <input class ="form-control" type="text" name="dataentrada" placeholder="Dataentrada"/>
                     </div>  
                    
                     <div class="form-group"> 
@@ -37,7 +37,7 @@
                    
                      <div class="form-group">
                        <label for="status"> ano</label>
-                        <input class ="form-control" type="text" id="status" name="status" placeholder="status"/>
+                        <input class ="form-control" type="text" id="status" name="ano" placeholder="status"/>
                      </div>
                   
                    

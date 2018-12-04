@@ -28,6 +28,6 @@ class CreateComprastableTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comprastable');
+        Schema::dropIfExists('compras');
     }
 }

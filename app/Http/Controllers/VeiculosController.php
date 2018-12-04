@@ -17,8 +17,8 @@ class VeiculosController extends Controller
     {
 //dd('aa');
         //Mostra o html do veiculo
-        $veiculo = Veiculos::all();
-        // dd($veiculo);
+        $veiculos = Veiculos::all();
+        // dd($veiculos);
         return view('veiculos.index', compact('veiculos'));
     }
 
@@ -67,7 +67,7 @@ class VeiculosController extends Controller
     public function edit($id)
     {
         //
-        $veiculo = $veiculo->find($id);
+        $veiculo = Veiculos::find($id);        
         return view('veiculos.update', compact('veiculo'));
     }
 
@@ -81,7 +81,7 @@ class VeiculosController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $veiculo = $veiculo->find($id);
+        $veiculo = Veiculos::find($id);
         // Clientes::create($request->all());
         $veiculo->update($request->all());
         return redirect()->route('veiculos.index');
@@ -97,7 +97,7 @@ class VeiculosController extends Controller
     public function destroy($id)
     {
         //Deletar o veiculo
-        $veiculo = $veiculo->find($id);
+        $veiculo = Veiculos::find($id);
         $veiculo->delete();
         return redirect()->route('veiculos.index');
     }

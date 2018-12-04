@@ -28,17 +28,17 @@
                    
                     <div class="form-group"> 
                        <label for="datasaida"> Data Saida </label>
-                       <input  value="{{$veiculo->telefone}}" class ="form-control" type="text" id="datasaida" name="datasaida" placeholder="Datasaida"/>
+                       <input  value="{{$veiculo->datadesaida}}" class ="form-control" type="text" id="datasaida" name="datasaida" placeholder="Datasaida"/>
                        </div>      
             
                    <div class="form-group">
                        <label for="status"> ano </label>
-                        <input  value="{{$veiculo->bairro}}" class ="form-control" type="text" id="status" name="status" placeholder="Status"/>
+                        <input  value="{{$veiculo->ano}}" class ="form-control" type="text" id="status" name="status" placeholder="Status"/>
                      </div>                   
                   
                      <div class="form-group">
                        <label for="status"> status </label>
-                        <input  value="{{$veiculo->bairro}}" class ="form-control" type="text" id="status" name="status" placeholder="Status"/>
+                        <input  value="{{$veiculo->status}}" class ="form-control" type="text" id="status" name="status" placeholder="Status"/>
                      </div> 
                    
                    

@@ -20,6 +20,8 @@ class CreateVeiculosTable extends Migration
                 $table->string('ano');
                 $table->string('placa');
                 $table->string('status');
+                $table->string('datadesaida');
+                $table->string('dataentrada');
                 $table->timestamps();
             });
         }
