@@ -14,7 +14,7 @@ class ProdutosController extends Controller
      */
     public function index()
     {
-        $produtos = Produtos::all();
+        $produtos = Produtos::all();        
         return view('produtos.index', compact('produtos'));
     }
 
@@ -71,9 +71,10 @@ class ProdutosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id, Produtos $produtos)
+    public function update($id, Request $request, Produtos $produtos)
     {
-        $produtos = $Produtos->find($id);
+        
+        $produtos = $produtos->find($id);
         
         $produtos->update($request->all());
         return redirect()->route('produtos.index');

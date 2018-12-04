@@ -17,12 +17,12 @@
                    </div>
                    <div class="form-group"> 
                        <label for="endereco"> Valor das peças</label>
-                       <input class ="form-control" type="text" id="endereco" name="endereco" placeholder="Endereço"/>
+                       <input class ="form-control" type="number" min="1" max="999999" id="endereco" name="valor" placeholder="Endereço"/>
                     </div>    
                    
                     <div class="form-group"> 
                        <label for="telefone"> Quantidade da peça</label>
-                       <input class ="form-control" type="text" id="telefone" name="telefone" placeholder="Telefone"/>
+                       <input class ="form-control" type="number" min="1" max="999999"id="telefone" name="quantidade" placeholder="Telefone"/>
                        </div>  
                    
                    
