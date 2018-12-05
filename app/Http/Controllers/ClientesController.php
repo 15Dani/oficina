@@ -12,10 +12,11 @@ class ClientesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {   
+        
         $clientes = Clientes::all();        
-        return view('clientes.index', compact('clientes'));
+        return view('clientes.index', compact('clientes', compact('request')));
     }
 
     /**
