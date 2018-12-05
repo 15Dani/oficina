@@ -15,8 +15,8 @@ class CreateComprastableTable extends Migration
     {
         Schema::create('compras', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('tipocompra');
-            $table->integer('valorcompra');
+            $table->integer('nome');
+            $table->integer('valor');
             $table->timestamps();
         });
     }

@@ -21,7 +21,7 @@
             <tbody>
               @forelse ($compras as $compras)
                 <tr>
-                  <td>{{  $compras->Nome  }}</td>
+                  <td>{{  $compras->nome  }}</td>
                   <td>{{  $compras->valor  }}</td>
                 <td class="text-center">
                 <form method="POST" action="{{route('compras.destroy', $compras->id)}}" accept-charset="UTF-8"><input name="_method" type="hidden" value="DELETE">

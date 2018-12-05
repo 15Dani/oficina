@@ -16,7 +16,7 @@
                          <input class ="form-control" type="text" id="nome" name="nome" placeholder="Nome"/>
                    </div>
                    <div class="form-group"> 
-                       <label for="valor"> Valor da compra/label>
+                       <label for="valor"> Valor da compra</label>
                        <input class ="form-control" type="text" id="valor" name="valor" placeholder="Valor"/>
                     </div>     
                    

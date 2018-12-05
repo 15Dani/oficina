@@ -60,9 +60,9 @@ class ComprasController extends Controller
     public function edit($id, Compras $compras)
     {
         //dd($funcionarios);
-        $Compras = $compras->find($id);
+        $compra = Compras::find($id);
         //dd($funcionario);
-        return view('compras.update', compact('compras'));
+        return view('compras.update', compact('compra'));
     }
 
     /**
@@ -74,7 +74,7 @@ class ComprasController extends Controller
      */
     public function update(Request $request, $id, Compras $compras)
     {
-        $compras = $compras->find($id);
+        $compras = Compras::find($id);
         
         $compras->update($request->all());
         return redirect()->route('compras.index');
@@ -88,7 +88,7 @@ class ComprasController extends Controller
      */
     public function destroy($id, Compras $compras)
     {
-        $compras = $compras->find($id);
+        $compras = Compras::find($id);
         $compras->delete();
         return redirect()->route('compras.index');
     }
