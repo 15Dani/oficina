@@ -12,10 +12,14 @@ class FuncionariosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $funcionarios = Funcionarios::all();
-        return view('funcionarios.index', compact('funcionarios'));
+        if ($request->input('busca')){
+            $funcionarios = Funcionarios::where('nome', 'LIKE', '%'.$request->input('busca').'%')->get();            
+        } else{            
+            $funcionarios = Funcionarios::all();
+        }
+        return view('funcionarios.index', compact('funcionarios', 'request'));
     }
 
     /**

@@ -12,10 +12,14 @@ class ComprasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $compras = Compras::all();
-        return view('compras.index', compact('compras'));
+        if ($request->input('busca')){
+            $compras = Compras::where('nome', 'LIKE', '%'.$request->input('busca').'%')->get();            
+        } else{            
+            $compras = Compras::all();
+        }
+        return view('compras.index', compact('compras', 'request'));
     }
 
     /**

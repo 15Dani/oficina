@@ -12,10 +12,14 @@ class FornecedoresController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $fornecedores = Fornecedores::all();
-        return view('fornecedores.index', compact('fornecedores'));
+        if ($request->input('busca')){
+            $fornecedores = Fornecedores::where('nome', 'LIKE', '%'.$request->input('busca').'%')->get();            
+        } else{             
+            $fornecedores = Fornecedores::all();
+        }
+        return view('fornecedores.index', compact('fornecedores', 'request'));
     }
 
     /**

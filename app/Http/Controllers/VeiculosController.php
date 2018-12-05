@@ -13,13 +13,14 @@ class VeiculosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-//dd('aa');
-        //Mostra o html do veiculo
-        $veiculos = Veiculos::all();
-        // dd($veiculos);
-        return view('veiculos.index', compact('veiculos'));
+        if ($request->input('busca')){
+            $veiculos = Veiculos::where('nome', 'LIKE', '%'.$request->input('busca').'%')->get();            
+        } else{            
+            $veiculos = Veiculos::all();
+        }
+        return view('veiculos.index', compact('veiculos', 'request'));
     }
 
 
