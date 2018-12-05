@@ -14,9 +14,12 @@ class ClientesController extends Controller
      */
     public function index(Request $request)
     {   
-        
-        $clientes = Clientes::all();        
-        return view('clientes.index', compact('clientes', compact('request')));
+        if ($request->input('busca')){
+            $clientes = Clientes::where('nome', 'LIKE', '%'.$request->input('busca').'%')->get();            
+        } else{
+            $clientes = Clientes::all();        
+        }
+        return view('clientes.index', compact('clientes', 'request'));
     }
 
     /**
