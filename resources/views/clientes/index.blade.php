@@ -8,10 +8,24 @@
   <meta charset="utf-8">
    
 <div class="container">
+
+  <div class="row">
+    {{-- BUSCA --}}
+      <div class="col-8">      
+          <a href="{{route('clientes.create')}}" class="btn btn-primary btn-xs pull-right"><b>+</b> Novo Cliente</a>  
+      </div>
+      <div class="col-4">
+              <form class="form-inline" action="/action_page.php">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-success" type="submit">Pesquisar</button>
+              </form>
+
+      </div>
+    </div>
+  {{-- BUSCA FIM --}}
     <div class="row ">
         <table class="table table-striped custab">
             <thead>
-            <a href="{{route('clientes.create')}}" class="btn btn-primary btn-xs pull-right"><b>+</b> Novo Cliente</a>
                 <tr>
                     <th>Nome</th>
                     <th>Endereço</th>
